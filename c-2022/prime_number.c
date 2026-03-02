@@ -1,30 +1,27 @@
 # include <stdio.h>
 
 int main(){
-    int n, i, j, isPrime; // n - user input number 
-    // i -> outer loop variable(check each number from 2 to n)
-    // j -> inner loop variable(check divisibility)
+    int n,i,j,isprime;
 
+    printf("Enter the number here")
+    scanf("%d" , &n)
 
-    printf("Enter a number:")
-    scanf("%d", &n);
+    printf("Enter the number between 1 and %d are :\n" ,n);
 
-    printf("Prime numbers between 1 and %d are:\n",n);
+    for(i=2 , i<=n , i++){
+        isprime=1; // Assume the number is prime 
 
-    for(i=2; i<=n; i++){
-        isPrime=1; // Assume number is prime
-
-        for(j = 2; j<= i/2; j++){
+        for(j=2,j=1/2,j++){
             if(i % j == 0){
-                isPrime = 0 // Not prime
+                isprime = 0;
                 break;
             }
         }
-        if(isPrime == 1) {
-            printf("%d", i);
+
+        if(isprime==1){
+            printf("%d" , i)
         }
     }
 
     return 0;
-
-    }
+}
