@@ -1,18 +1,18 @@
-#include <stdio.h>
+# include <stdio.h>
 
-void modify(int x) {
-    x = x + 10;   // Modifying copy
-    printf("Value inside function: %d\n", x);
+void modify(int x){
+    x=x+10;
+    printf('value inside function : %d\n', x);
+
 }
+int main(){
+    int num = 10;
 
-int main() {
-    int num = 20;
+    printf("value before the function : %d\n", num);
 
-    printf("Value before function call: %d\n", num);
+    modify(num);
 
-    modify(num);   // Passing value
-
-    printf("Value after function call: %d\n", num);
+    printf("value after the function : %d\n", num );
 
     return 0;
 }
