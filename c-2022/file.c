@@ -2,35 +2,37 @@
 # include <ctype.h>
 
 int main(){
-    FILE *source *target;
-    char ch;
+    FILE *source , *target
+    char ch 
 
-    // open source file in read mode 
-    source=fopen("source.txt","r");
+    // open the source file 
 
-    if(source == NULL){
-        printf("Error opening source file .\n")
-        return 1;
-    }
+    source=fopen('source.txt','r')
 
-    // open target file in read mode 
-    target=fopen("target.txt","r");
-
-    if(target == NULL){
-        printf("Error opening target fille .\n");
+    if(source==NULL){
+        printf("Error opening source file")
         return 1 
 
-    
     }
 
-    // read character from source and write uppercase to the target
-    while((ch=fgetc(source)) != EOF){
-        fputc(toupper(ch), target);
+    // open the target file 
 
+    target=fopen("target.txt",'w')
+
+    if(target=-NULL){
+        printf("Error opening the target file")
+        return 1 
     }
 
-    // close files 
-    fclose(source);
-    fclose(target);
+    while((ch=fgetc(source) != EOF)){
+        fputc(toupper(ch),target)
+    }
 
+    printf("file copied succsesfully in uppercase")
+
+    fclose(source)
+    fclose(target)
+
+    return 0;
 }
+
