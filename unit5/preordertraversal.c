@@ -1,17 +1,17 @@
-#include <stdio.h>
+# include <stdio.h>
 
 struct node{
     int data;
-    struct node*left;
-    struct node*right;
-};
+    struct node *left;
+    struct node *right;
+}
 
-void preorder(struct node *root)
+void postorder(struct node *root)
 {
-    if (root != NULL)
+    if(root!=NULL)
     {
-        print("%d" , root->data);
-        preorder(root->left);
-        preorder(root-> right);
+        postorder(root->left);
+        postorder(root->right);
+        printf("%d",root->data)
     }
 }

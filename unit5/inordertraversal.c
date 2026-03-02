@@ -1,17 +1,22 @@
-#include <stdio.h>
+# include <stdio.h>
 
-struct node{
-    int main; 
-    struct node* left;
-    struct node* right;
-}
-
-void inordertraversal( struct node *root);
+struct inordertraversal
 {
-    if(root != NULL)
+    int data;
+    struct inordertraversal *left;
+    struct inordertraversal *right;
+    /* data */
+};
+ 
+void inorder(struct inordertraversal* root)
+{
+    if(root!=NULL)
     {
         inorder(root->left);
         printf("%d ", root->data);
         inorder(root->right);
     }
+
+
 }
+

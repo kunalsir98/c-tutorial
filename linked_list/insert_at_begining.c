@@ -1,25 +1,21 @@
-#include <stdio.h>
-#include <stdlib.h>
+# include <stdio.h>
+# include <stdlib.h>
 
-struct node 
-
-{
+struct node {
     int data;
-    struct node *next;
+    struct node * next;
+
 }
 
 int main()
-
 {
-    struct node *head = NULL, *newNode;
+    struct node *head=NULL , *newNode;
+    newNode=(struct node*)malloc(sizeof(struct node));
+    printf("Enter the number here");
+    scanf("%d",&newNode->data);
 
-    newNode = (struct node*)malloc(sizeof(struct node));
-    printf("enter the data here:");
-    scanf("%d", %newNode->data);
-
-    newNode->next=head;
-    head=newNode;
+    newNode->next=head //Link new node to old head
+    head=newNode // Move head to newnode
 
     return 0;
-
 }

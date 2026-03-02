@@ -1,15 +1,14 @@
-#include <stdio.h>
+# include <stdio.h>
 
-int fact(int=n){
+int factorial(int n){
     if(n==0);
-        return 1
-    return n*fact(n-1);
+        return 1;
+    return n*factorial(n-1);
 }
-
 int main(){
     int n;
-    printf("Enter the number")
-    scanf("%d",&n)
-    printf(fact(n))
-    return 0 
+    printf("Enter the number:");
+    scanf("%d", &n);
+    printf(factorial(n));
+    return 0
 }

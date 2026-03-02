@@ -1,19 +1,17 @@
-#include <stdio.h>
-#include <stdlib.h>
+# include <stdio.h>
+# include <stdlib.h>
 
-struct node
-{
+struct node {
     int data;
-    struct node *next;
+    struct node *next
 }
 
 int main()
 {
-    struct node * head= NULL, *newNode,*temp;
+    struct node *head=NULL, *newNode, *temp  
     newNode=(struct node*)malloc(sizeof(struct node));
-    printf("Enter the data here:");
-    scanf("%d %d",&newNode->data=&pos);
-
+    print('Enter the  number here');
+    scanf('%d' , &newNode->data=&pos);
 
     if(pos=1)
     {
@@ -25,11 +23,17 @@ int main()
         while(i<pos-1);
 
         temp=temp->next;
-        i++;
+        i++
 
-        newNode->next= temp->next;
+        newNode->next=temp->next;
         temp->next=newNode
 
     }
+
     return 0;
+
+
+
+
+
 }

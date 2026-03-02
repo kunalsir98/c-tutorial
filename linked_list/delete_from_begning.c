@@ -1,27 +1,23 @@
-#include <stdio.h>
-#include <stdlib.h>
+# include <stdio.h>
+# include <stdlib.h>
 
-struct node
-{
+struct node {
     int data;
-    struct node *next;
-
+    struct node *head;
 }
 
 int main()
 {
-    struct node *head = NULL , *temp;
+    struct node *head=NULL , *temp
 
-    if(head=NULL);
-        printf("list is empty");
-    
+    if (head=NULL);
+        printf("List is Empty")
+
     else{
         temp=head;
         head=head->next;
         free(temp);
-        printf("Deleted from begning");
+        print("Delete from Begning");
     }
     return 0;
-    
-
 }
