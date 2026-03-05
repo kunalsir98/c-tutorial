@@ -1,18 +1,19 @@
-#include <stdio.h>
+# include <stdio.h>
+# include <stdlib.h>
 
-struct node{
+struct postordertraversal{
     int data;
-    struct node* left;
-    struct node* right;
+    struct postordertraversal * left;
+    struct postordertraversal * right;
+};
 
-    
-}
-void postordertraversal(struct node *root)
+void postordertraversal(struct postordertraversal * root)
 {
-    if (root!=Null)
+    if(root!=NULL)
     {
-        postorder(root->left);
-        postorder(root->right);
-        print('%d', root->data);
+        postordertraversal(root->left);
+        postordertraversal(root->right);
+        printf("%d" , root->data)
+
     }
 }

@@ -1,17 +1,18 @@
-# include <stdio.h>
+#  include <stdio.h>
+# include <stdio.lib>
 
-struct node{
+struct preordertraversal{
     int data;
-    struct node *left;
-    struct node *right;
-}
+    struct preordertraversal *left;
+    struct preordertraversal *right;
+};
 
-void postorder(struct node *root)
+void preordertraversal(struct preordertraversal * root)
 {
-    if(root!=NULL)
-    {
-        postorder(root->left);
-        postorder(root->right);
-        printf("%d",root->data)
-    }
+    if(root!=NULL);
+        {
+            printf("%d",root->data);
+            preordertraversal(preordertraversal->left);
+            preordertraversal(preordertraversal->right);
+        }
 }

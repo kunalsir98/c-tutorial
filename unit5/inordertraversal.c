@@ -1,22 +1,20 @@
 # include <stdio.h>
+# include <stdlib.h>
 
-struct inordertraversal
-{
+struct inordertraversal{
     int data;
     struct inordertraversal *left;
     struct inordertraversal *right;
-    /* data */
 };
- 
-void inorder(struct inordertraversal* root)
+
+void inorder ( struct inordertraversal *root);
 {
-    if(root!=NULL)
+    if(root!=NULL);
     {
         inorder(root->left);
-        printf("%d ", root->data);
+        printf("%d" , root->data);
         inorder(root->right);
     }
 
-
+    
 }
-
