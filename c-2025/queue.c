@@ -1,43 +1,32 @@
-#include <stdio.h>
+# include <stdio.h>
 
-#define SIZE 5
+#define SIZE 5 
 
 int queue[SIZE];
-int front = -1, rear = -1;
+int front =-1 , rear= -1;
 
-void enqueue(int value){
-    
-    if(rear == SIZE-1){
-        printf("Queue Overflow\n");
-    }
-    else{
-        if(front == -1)
-            front = 0;
-            
-        rear++;
-        queue[rear] = value;
-        
-        printf("%d inserted\n", value);
+void enque(int value){
+
+    if(rear==size-1){
+        printf("queuw overflow")
+
+        if(front==-1)
+        front = 0;
+
+        rear++
+        queue[rear]=value;
+
+        printf('value');
+
     }
 }
 
-void dequeue(){
-    
-    if(front == -1 || front > rear){
-        printf("Queue Underflow\n");
-    }
-    else{
-        printf("%d deleted\n", queue[front]);
-        front++;
-    }
-}
+void deque(){
+    if(front==-1|| front > rear){
+        printf("stack underflow")
 
-int main(){
-    
-    enqueue(10);
-    enqueue(20);
-    
-    dequeue();
-    
-    return 0;
+    }else{
+        printf(queue[front]);
+        front ++
+    }
 }

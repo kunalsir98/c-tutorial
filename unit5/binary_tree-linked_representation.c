@@ -1,17 +1,17 @@
-#include <stdio.h>
-#include <stdlib.>
+# include <stdio.h>
+# include <stdlib.h>
 
-struct node{
-    int data;
+struct node {
+    int data ;
     struct node *left *right;
 };
 
 struct node *createbinary(int main)
 {
-    struct node *newNode=(struct node*)malloc(struct node);
+    struct node *newNode=(struct node)malloc(struct node);
     newNode->data=data;
-    newNode->left=NULL;
-    newNode->right=NULL;
+    newNode->left=left;
+    newNode->right=right;
 
-    return newNode;
+    return newNode
 }

@@ -5,16 +5,13 @@ struct inordertraversal{
     int data;
     struct inordertraversal *left;
     struct inordertraversal *right;
-};
+}
 
-void inorder ( struct inordertraversal *root);
+void inordertraversal(struct  *root);
 {
-    if(root!=NULL);
-    {
-        inorder(root->left);
-        printf("%d" , root->data);
-        inorder(root->right);
+    if(root!=NULL){
+        inrordertraversal(root->left);
+        printf("%d",root->data);
+        inordertraversal(root->right);
     }
-
-    
 }

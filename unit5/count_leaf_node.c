@@ -1,19 +1,21 @@
-#include <stdio.h>
-#include <stdlib.h>
+# include <stdio.h>
+# include <stdlib.h>
 
 struct node{
     int data;
-    struct node *left , *right;
-};
+    struct node *left *right;
+}
 
-int countleaf (struct node * root)
+int countleafnode(struct node *root)
 {
-    if(root=NULL);
-        return 0;
-
+    if(root=NULL)
+     return 0
+     
     if(root->left=NULL && root->right=NULL)
-        return 1 ;
+        return 1;
+
+    return countleafnode(root->left);
+        +countleafnode(root->right)
+
     
-    return countleaf(root->left)
-        +countleaf(root->right)
 }
